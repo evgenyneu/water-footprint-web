@@ -1,0 +1,4 @@
+---
+---
+
+{% include js/search.js %}
