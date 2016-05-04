@@ -1,8 +1,8 @@
 (function(){
-  var searchInput;
-  var searchClearIcon;
-  var searchIcon;
-  var footerSpacer;
+  var searchInput,
+    searchClearIcon,
+    searchIcon,
+    footerSpacer;
 
 
   // Replace accent characters with normal ones
@@ -35,16 +35,18 @@
     return null;
   }
 
-  function didChangeInput(value) {
+
+
+  function doSearch(value) {
     showHideClearIcon(value.length > 0);
     value = prepareTextForCompare(value);
     var items = document.querySelectorAll(".List-item");
 
     for(var i=0; i < items.length; i++) {
-      var item = items[i];
-      var itemName = item.querySelector(".List-itemName");
-      var itemText = prepareTextForCompare(itemName.innerHTML);
-      var synonyms = itemSynonyms(item);
+      var item = items[i],
+        itemName = item.querySelector(".List-itemName"),
+        itemText = prepareTextForCompare(itemName.innerHTML),
+        synonyms = itemSynonyms(item);
 
       var showItem = itemText.indexOf(value) > -1 ||
         (synonyms !== null && synonyms.indexOf(value) > -1);
@@ -77,7 +79,7 @@
     loadElements();
 
     searchInput.addEventListener('input', function() {
-      didChangeInput(searchInput.value);
+      doSearch(searchInput.value);
     });
 
     searchInput.onfocus = didFocusSearchInput;
@@ -114,7 +116,7 @@
 
   function didClickClear() {
     searchInput.value = '';
-    didChangeInput('');
+    doSearch('');
   }
 
   init();
