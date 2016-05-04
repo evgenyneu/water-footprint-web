@@ -4,6 +4,18 @@
   var searchIcon;
   var footerSpacer;
 
+
+  // Replace accent characters with normal ones
+  function removeDiacriticMarks(text) {
+    return text.replace('ё', 'е');
+  }
+
+  // Comverts text to lower case and removes diacritic marks
+  function prepareTextForCompare(text) {
+    return removeDiacriticMarks(text).toLowerCase();
+  }
+
+
   // Show/hide element
   function showElement(element, show, className) {
     element.className = className;
@@ -13,21 +25,30 @@
     }
   }
 
+  function itemSynonyms(item) {
+    var dataAttribute = item.getAttribute('data-synonyms');
+
+    if (dataAttribute !== null) {
+      return prepareTextForCompare(dataAttribute);
+    }
+
+    return null
+  }
+
   function didChangeInput(value) {
     showHideClearIcon(value.length > 0);
-    value = value.toLowerCase();
+    value = prepareTextForCompare(value);
     var items = document.querySelectorAll(".List-item");
     var numberOfElementMatched = 0;
 
     for(var i=0; i < items.length; i++) {
       var item = items[i];
       var itemName = item.querySelector(".List-itemName");
-      var itemText = itemName.innerHTML.toLowerCase();
-
-      var dataAttribute = item.getAttribute("data-synonyms");
+      var itemText = prepareTextForCompare(itemName.innerHTML);
+      var synonyms = itemSynonyms(item)
 
       var showItem = itemText.indexOf(value) > -1 ||
-        (dataAttribute && dataAttribute.toLowerCase().indexOf(value) > -1);
+        (synonyms !== null && synonyms.indexOf(value) > -1);
 
       if (showItem) {
         numberOfElementMatched += 1;

@@ -13,14 +13,28 @@ def project_root
   File.expand_path('../..', __FILE__)
 end
 
-def html_data(name:, synonyms:, footprint_value:)
+def add_thousand_separator(value:, separator:)
+  value.to_s.reverse.gsub(/...(?=.)/,'\&' + separator).reverse
+end
+
+
+def format_number(value:, language:)
+  value = value.to_i
+  thousands_separator = ' '.reverse
+  thousands_separator = ',' if %w(en ja zh).include?(language)
+  add_thousand_separator(value: value, separator: thousands_separator)
+end
+
+def html_data(name:, synonyms:, footprint_value:, language:)
+  footprint_value = format_number(value: footprint_value, language: language)
+
 %{<div class="List-item" data-synonyms="#{CGI.escapeHTML(synonyms)}">
   <div class="List-itemName">#{CGI.escapeHTML(name)}</div>
   <div>#{footprint_value}</div>
 </div>}
 end
 
-def html_from_single_line(line)
+def html_from_single_line(line:, language:)
   fields = line.split("\t")
 
   if fields.count != 3
@@ -29,8 +43,8 @@ def html_from_single_line(line)
   end
 
   (name, synonyms, footprint_value) = fields
-  footprint_value.tr!("\n\r", '')
-  html_data(name: name, synonyms: synonyms, footprint_value: footprint_value)
+  footprint_value.tr! "\n\r", '' # Remove newline character
+  html_data(name: name, synonyms: synonyms, footprint_value: footprint_value, language: language)
 end
 
 def language_code(file)
@@ -60,7 +74,7 @@ def process_single_file(file)
   end
 
   html = File.readlines(file).map do |line|
-    html_from_single_line(line)
+    html_from_single_line(line: line, language: language)
   end
 
   File.open(destination_file_path, 'w') do |output_file|
