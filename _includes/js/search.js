@@ -68,6 +68,14 @@
 
     searchClearIcon.onclick = didClickClear;
     searchIcon.onclick = didClickSearchIcon;
+
+    document.onkeydown = didPressKey
+  }
+
+  function didPressKey(evt) {
+    // Clear the search text box when Escape is pressed
+    evt = evt || window.event;
+    if (evt.keyCode == 27) { didClickClear(); }
   }
 
   // Search icon
