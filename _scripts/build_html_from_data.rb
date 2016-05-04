@@ -7,8 +7,18 @@
 #   ./_scripts/build_html_from_data.rb
 #
 
+def project_root
+  File.expand_path('../..',__FILE__)
+end
+
+def process_single_line(line)
+  puts line.split("\t")
+end
+
 def process_single_file(file)
-  puts file
+  File.readlines(file).each do |line|
+    process_single_line line
+  end
 end
 
 def process_files(files)
@@ -18,7 +28,6 @@ def process_files(files)
 end
 
 def run
-  project_root = File.expand_path('../..',__FILE__)
   data_path = File.join(project_root, '_data')
 
   unless File.directory?(data_path)
