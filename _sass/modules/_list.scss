@@ -1,3 +1,18 @@
+/*
+
+  Displays a list of products with two columns: name and water footprint value
+
+*/
+
 .List-item {
-  color: red
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: $iiMarginNormal;
+  border-top: 1px solid $shade100;
+}
+
+.List-itemName {
+  padding-right: $iiMarginSmall;
 }

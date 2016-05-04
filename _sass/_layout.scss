@@ -5,4 +5,7 @@
   }
 }
 
-.layout-padding { padding: $iiMarginNormal; }
+.layout-paddingHorizontal {
+  padding-left: $iiMarginMini;
+  padding-right: $iiMarginMini;
+}

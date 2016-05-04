@@ -4,7 +4,13 @@ html { -webkit-text-size-adjust: 100%; }
 body {
   color: $shade100;
   background-color: $shade10;
-  font-family: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+
   font-size: 17px;
   word-wrap: break-word;
+}
+
+b {
+  font-weight: 600;
 }

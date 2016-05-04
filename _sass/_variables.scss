@@ -12,12 +12,16 @@ $shade97:   #fdfdfd;
 $shade100:  #ffffff;
 
 // Responsive Breakpoints
-$fixedBreakpoint: 600px;
-
+$fixedBreakpoint: 500px;
 
 // Margins
+$iiMarginNano:    2px;
 $iiMarginMini:    6px;
 $iiMarginSmall:   10px;
 $iiMarginNormal:  15px;
 $iiMarginLarge:   20px;
 $iiMargin2x:      30px;
+
+
+// Module related
+$searchIconSize:  30px;

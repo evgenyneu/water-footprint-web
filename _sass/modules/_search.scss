@@ -1,0 +1,24 @@
+.Search {
+  display: flex;
+  align-items: center;
+  margin: $iiMarginSmall $iiMarginNormal;
+}
+
+
+.Search-icon {
+  width: $searchIconSize;
+  height: $searchIconSize;
+}
+
+.Search-clearIcon {
+  width: $searchIconSize;
+  height: $searchIconSize;
+}
+
+.Search-input {
+  color: $shade100;
+  background-color: $shade10;
+  padding: $iiMarginSmall;
+  border: none;
+  flex: 1;
+}
