@@ -1,0 +1,13 @@
+.TopBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: $iiMarginNormal;
+  padding-top: $iiMarginMini;
+}
+
+.TopBar-link {
+  color: #bbbbff;
+  text-decoration: underline;
+}
