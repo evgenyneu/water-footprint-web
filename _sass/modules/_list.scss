@@ -4,7 +4,7 @@
 
 */
 
-.List-item {
+.List-item, .List-itemHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -15,4 +15,8 @@
 
 .List-itemName {
   padding-right: $iiMarginSmall;
+}
+
+.List-item.isHidden {
+  display: none;
 }
