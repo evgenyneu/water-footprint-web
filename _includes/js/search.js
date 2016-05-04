@@ -12,7 +12,7 @@
 
   // Comverts text to lower case and removes diacritic marks
   function prepareTextForCompare(text) {
-    return removeDiacriticMarks(text).toLowerCase();
+    return removeDiacriticMarks(text).toLowerCase().trim();
   }
 
 
@@ -32,30 +32,25 @@
       return prepareTextForCompare(dataAttribute);
     }
 
-    return null
+    return null;
   }
 
   function didChangeInput(value) {
     showHideClearIcon(value.length > 0);
     value = prepareTextForCompare(value);
     var items = document.querySelectorAll(".List-item");
-    var numberOfElementMatched = 0;
 
     for(var i=0; i < items.length; i++) {
       var item = items[i];
       var itemName = item.querySelector(".List-itemName");
       var itemText = prepareTextForCompare(itemName.innerHTML);
-      var synonyms = itemSynonyms(item)
+      var synonyms = itemSynonyms(item);
 
       var showItem = itemText.indexOf(value) > -1 ||
         (synonyms !== null && synonyms.indexOf(value) > -1);
 
-      if (showItem) {
-        numberOfElementMatched += 1;
-      }
-
       showElement(item, showItem, "List-item");
-    }(value);
+    }
   }
 
   function didFocusSearchInput() {
@@ -90,7 +85,7 @@
     searchClearIcon.onclick = didClickClear;
     searchIcon.onclick = didClickSearchIcon;
 
-    document.onkeydown = didPressKey
+    document.onkeydown = didPressKey;
   }
 
   function didPressKey(evt) {
