@@ -37,9 +37,9 @@
 
 
 
-  function doSearch(value) {
-    showHideClearIcon(value.length > 0);
-    value = prepareTextForCompare(value);
+  function doSearch(searchText) {
+    showHideClearIcon(searchText.length > 0);
+    searchText = prepareTextForCompare(searchText);
     var items = document.querySelectorAll('.List-item');
 
     for(var i=0; i < items.length; i++) {
@@ -48,8 +48,8 @@
         itemText = prepareTextForCompare(itemName.innerHTML),
         synonyms = itemSynonyms(item);
 
-      var showItem = itemText.indexOf(value) > -1 ||
-        (synonyms !== null && synonyms.indexOf(value) > -1);
+      var showItem = itemText.indexOf(searchText) > -1 ||
+        (synonyms !== null && synonyms.indexOf(searchText) > -1);
 
       showElement(item, showItem, 'List-item');
     }
