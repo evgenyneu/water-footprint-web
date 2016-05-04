@@ -1,0 +1,10 @@
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+body {
+  color: $shade100;
+  background-color: $shade10;
+  font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+  font-size: 17px;
+  word-wrap: break-word;
+}
