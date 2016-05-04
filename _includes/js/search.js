@@ -21,7 +21,7 @@
     element.className = className;
 
     if (!show) {
-      element.className += " isHidden";
+      element.className += ' isHidden';
     }
   }
 
@@ -40,18 +40,18 @@
   function doSearch(value) {
     showHideClearIcon(value.length > 0);
     value = prepareTextForCompare(value);
-    var items = document.querySelectorAll(".List-item");
+    var items = document.querySelectorAll('.List-item');
 
     for(var i=0; i < items.length; i++) {
       var item = items[i],
-        itemName = item.querySelector(".List-itemName"),
+        itemName = item.querySelector('.List-itemName'),
         itemText = prepareTextForCompare(itemName.innerHTML),
         synonyms = itemSynonyms(item);
 
       var showItem = itemText.indexOf(value) > -1 ||
         (synonyms !== null && synonyms.indexOf(value) > -1);
 
-      showElement(item, showItem, "List-item");
+      showElement(item, showItem, 'List-item');
     }
   }
 
@@ -69,10 +69,10 @@
   }
 
   function loadElements() {
-    searchInput = document.querySelector(".Search-input");
-    searchIcon = document.querySelector(".Search-icon");
-    searchClearIcon = document.querySelector(".Search-clearIcon");
-    footerSpacer = document.querySelector(".Footer-spacer");
+    searchInput = document.querySelector('.Search-input');
+    searchIcon = document.querySelector('.Search-icon');
+    searchClearIcon = document.querySelector('.Search-clearIcon');
+    footerSpacer = document.querySelector('.Footer-spacer');
   }
 
   function init() {
@@ -107,10 +107,10 @@
   // --------------
 
   function showHideClearIcon(show) {
-    searchClearIcon.className = "Search-clearIcon";
+    searchClearIcon.className = 'Search-clearIcon';
 
     if (!show) {
-      searchClearIcon.className += " isVisibilityHidden";
+      searchClearIcon.className += ' isVisibilityHidden';
     }
   }
 
