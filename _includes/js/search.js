@@ -1,6 +1,11 @@
 (function(){
+  var searchInput;
+  var searchClearIcon;
+  var searchIcon;
+
 
   function didChangeInput(value) {
+    showHideClearIcon(value.length > 0);
     value = value.toLowerCase();
     var items = document.querySelectorAll(".List-item");
 
@@ -21,13 +26,48 @@
     }
   }
 
+
+
+  function loadElements() {
+    searchInput = document.querySelector(".Search-input");
+    searchIcon = document.querySelector(".Search-icon");
+    searchClearIcon = document.querySelector(".Search-clearIcon");
+  }
+
   function init() {
-    var searchInput = document.querySelector(".Search-input");
+    loadElements();
 
     // User updates mass in simulation
     searchInput.addEventListener('input', function() {
       didChangeInput(searchInput.value);
     });
+
+
+    searchClearIcon.onclick = didClickClear;
+    searchIcon.onclick = didClickSearchIcon;
+  }
+
+  // Search icon
+  // --------------
+
+  function didClickSearchIcon() {
+    searchInput.focus();
+  }
+
+  // Clear icon
+  // --------------
+
+  function showHideClearIcon(show) {
+    searchClearIcon.className = "Search-clearIcon";
+
+    if (!show) {
+      searchClearIcon.className += " isVisibilityHidden";
+    }
+  }
+
+  function didClickClear() {
+    searchInput.value = '';
+    didChangeInput('');
   }
 
   init();
