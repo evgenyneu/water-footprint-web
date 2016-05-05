@@ -1,5 +1,5 @@
 ---
-layout: list
+layout: default
 language: en
 layout_class: "layout-paddingHorizontal"
 header_title: Water Footprint

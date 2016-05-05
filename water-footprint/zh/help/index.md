@@ -1,5 +1,5 @@
 ---
-layout: list
+layout: default
 language: en
 header_title: 水足迹
 header_english_link: 中文

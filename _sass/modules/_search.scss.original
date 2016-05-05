@@ -10,7 +10,7 @@
 .Search {
   display: flex;
   align-items: center;
-  padding: $iiMarginSmall $iiMarginNormal;
+  padding: $iiMarginMini $iiMarginNormal;
   border-top: 1px solid $shade100;
 }
 
@@ -33,6 +33,10 @@
   padding: $iiMarginSmall;
   border: none;
   flex: 1;
+}
+
+.Search-input::-ms-clear {
+  display: none;
 }
 
 

@@ -1,3 +1,12 @@
+/*
+
+  Styles the search bar.
+
+  This is the original CSS file for the List.
+  Autoprefix it through https://autoprefixer.github.io/ and put to _search.scss.
+
+*/
+
 .Search {
   display: -webkit-box;
   display: -webkit-flex;
@@ -29,3 +38,14 @@
   -webkit-flex: 1;
       -ms-flex: 1;
           flex: 1; }
+
+.Search-input::-ms-clear {
+  display: none; }
+
+/*
+
+End of Search CSS
+--------------
+
+*/
+
