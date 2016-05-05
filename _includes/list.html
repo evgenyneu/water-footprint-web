@@ -1,9 +1,9 @@
 {% include header.html %}
 
 <div class="Search">
-  <img class="Search-icon" src="{{ "/image/search.png" | prepend: site.baseurl }}" alt="{{ page.list_search_input_placeholder | escape }}">
+  <img class="Search-icon" src="{{ "image/search.png" | prepend: site.subpath_url }}" alt="{{ page.list_search_input_placeholder | escape }}">
   <input class="Search-input" type="text" placeholder="{{ page.list_search_input_placeholder | escape }}">
-  <img class="Search-clearIcon isVisibilityHidden" src="{{ "/image/clear.png" | prepend: site.baseurl }}" alt="{{ page.list_clear_button_alt_text | escape }}">
+  <img class="Search-clearIcon isVisibilityHidden" src="{{ "image/clear.png" | prepend: site.subpath_url }}" alt="{{ page.list_clear_button_alt_text | escape }}">
 </div>
 
 
