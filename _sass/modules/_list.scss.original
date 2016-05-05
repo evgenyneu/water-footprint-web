@@ -1,0 +1,34 @@
+/*
+
+  Displays a list of products with two columns: name and water footprint value
+  This is the original CSS file for the List.
+  Autoprefix it through https://autoprefixer.github.io/ and put to _list.scss.
+
+*/
+
+
+
+.List-item, .List-itemHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: $iiMarginNormal;
+  border-top: 1px solid $shade100;
+}
+
+.List-itemName {
+  padding-right: $iiMarginSmall;
+}
+
+.List-item.isHidden {
+  display: none;
+}
+
+/*
+
+End of List CSS
+--------------
+
+*/
+

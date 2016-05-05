@@ -1,0 +1,45 @@
+/*
+
+  Styles the search bar.
+
+  This is the original CSS file for the List.
+  Autoprefix it through https://autoprefixer.github.io/ and put to _search.scss.
+
+*/
+
+.Search {
+  display: flex;
+  align-items: center;
+  padding: $iiMarginSmall $iiMarginNormal;
+  border-top: 1px solid $shade100;
+}
+
+
+.Search-icon {
+  width: $searchIconSize;
+  height: $searchIconSize;
+  cursor: pointer;
+}
+
+.Search-clearIcon {
+  width: $searchIconSize;
+  height: $searchIconSize;
+  cursor: pointer;
+}
+
+.Search-input {
+  color: $shade100;
+  background-color: $shade10;
+  padding: $iiMarginSmall;
+  border: none;
+  flex: 1;
+}
+
+
+/*
+
+End of Search CSS
+--------------
+
+*/
+

@@ -3,11 +3,13 @@
 
   {% include head.html %}
 
-  <body>
+  <body class='{{ page.layout_class }}'>
 
     <div class="layout-fixed">
       {{ content }}
     </div>
+
+    <br><br>
 
     <script src="{{ "js/app.js" | prepend: site.subpath_url }}"></script>
   </body>
