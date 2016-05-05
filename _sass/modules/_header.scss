@@ -1,8 +1,9 @@
 .Header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding-bottom: $iiMarginNormal;
+}
 
-  padding: $iiMarginNormal;
+.Header-link {
+  display: inline-block;
   padding-top: $iiMarginMini;
+  padding-bottom: $iiMarginNormal;
 }
