@@ -14,4 +14,4 @@ subpath_url: "/water-footprint/" # name of the subpath for the water footprint s
 # Build settings
 markdown: kramdown
 
-exclude: ['README.md']
+exclude: ['README.md', 'LICENSE']

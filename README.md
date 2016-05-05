@@ -2,6 +2,8 @@
 
 This is a source for the [web site](http://evgenii.com/water-footprint/en/) that shows the amount of water needed to produce a range of agricultural products.
 
+This web site was built with Jekyll and Ruby. When developing the web site locally use the /water-footprint/en/ URL in the web browser.
+
 ## Build HTML from data files
 
 The data files for the water footprint of agriculcural products for different languages are localed in the `_data` directory.
