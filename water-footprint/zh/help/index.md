@@ -12,6 +12,18 @@ header_help_link: 帮助
 
 这款应用程序的中文名为水足迹，它展示了生产 (1公斤) 农产品需要的淡水 (升) 数。举例，生产1公斤牛肉大约需要1.5万升水。而生产1公斤土豆只需要285升水。
 
+<br>
+
+<div class='isTextCentered'>
+  <p>
+    <a href='https://play.google.com/store/apps/details?id=com.evgenii.waterfootprint' title='Google Play'><img src='{{ "image/logos/zh/google_play_badge.png" | prepend: site.subpath_url }}' alt='Google Play' class='isMax200PxWide'></a>
+  </p>
+
+  <p>
+    <a href='https://itunes.apple.com/cn/app/water-footprint/id1044041294' title='App Store'><img src='{{ "image/logos/zh/appstore_badge.png" | prepend: site.subpath_url }}' alt='App Store' class='isMax200PxWide'></a>
+  </p>
+</div>
+
 
 为什么我需要关心这个话题？
 -----------

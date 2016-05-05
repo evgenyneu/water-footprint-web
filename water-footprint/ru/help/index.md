@@ -12,6 +12,22 @@ header_help_link: Помощь
 
 Приложение ”Водный след” показывает объём пресной воды (в литрах) необходимый для производства ряда продуктов сельского хозяйства (один килограмм). Например, для производства одного килограмма говядины необходимо примерно 15 тысяч литров пресной воды. Для сравнения, для производства одного килограмма картофеля нужно 285 литров воды.
 
+<br>
+
+<div class='isTextCentered'>
+  <p>
+    <a href='https://play.google.com/store/apps/details?id=com.evgenii.waterfootprint' title='Доступно в Google Play'><img src='{{ "image/logos/ru/google_play_badge.png" | prepend: site.subpath_url }}' alt='Доступно в Google Play' class='isMax200PxWide'></a>
+  </p>
+
+  <p>
+    <a href='https://itunes.apple.com/ru/app/water-footprint/id1044041294' title='Загрузите в App Store'><img src='{{ "image/logos/ru/appstore_badge.png" | prepend: site.subpath_url }}' alt='Загрузите в App Store' class='isMax200PxWide'></a>
+  </p>
+
+  <p>
+    <a href='http://evgenii.com/water-footprint/ru/'>Водный след для Веб</a>
+  </p>
+</div>
+
 
 Почему нам не всё равно?
 -----------

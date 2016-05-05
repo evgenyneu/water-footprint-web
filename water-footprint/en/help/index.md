@@ -12,6 +12,22 @@ header_help_link: Help
 The Water Footprint app shows the required volume (litres) of freshwater to produce a range of agricultural products (1 kilogram). For example, approximately 15 thousand litres of water is required to produce a single kilogram of beef. In comparison, 285 litres of water is needed to grow a kilo of potatoes.
 
 
+<br>
+
+<div class='isTextCentered'>
+  <p>
+    <a href='https://play.google.com/store/apps/details?id=com.evgenii.waterfootprint' title='Get it on Google Play'><img src='{{ "image/logos/en/google_play_badge.png" | prepend: site.subpath_url }}' alt='Get it on Google Play' class='isMax200PxWide'></a>
+  </p>
+
+  <p>
+    <a href='https://itunes.apple.com/us/app/water-footprint/id1044041294' title='Download on App Store'><img src='{{ "image/logos/en/appstore_badge.png" | prepend: site.subpath_url }}' alt='Download on App Store' class='isMax200PxWide'></a>
+  </p>
+
+  <p>
+    <a href='http://evgenii.com/water-footprint/en/'>Water Footprint for Web</a>
+  </p>
+</div>
+
 ## Why should I care?
 
 Agriculture accounts for the largest consumption of global freshwater. Three times more water is used in agriculture than the amount used for all other industries. Furthermore, for irrigation, the amount of water used is several times greater than that for household purposes which includes water for drinking, washing, bathing and gardening.

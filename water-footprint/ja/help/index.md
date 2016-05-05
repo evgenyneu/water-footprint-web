@@ -12,6 +12,18 @@ header_help_link: ヘルプ
 
 このアプリ「水の足跡」は、様々な農業生産物１kgに対して必要とされる淡水の容積(L)を表示するアプリです。例えば、1kgの牛肉を生産するために、およそ15,000Lの水が必要になります。対照的に、1kgのジャガイモを育てるために必要な水の量は、わずか285Lです。
 
+<br>
+
+<div class='isTextCentered'>
+  <p>
+    <a href='https://play.google.com/store/apps/details?id=com.evgenii.waterfootprint' title='Google Play'><img src='{{ "image/logos/ja/google_play_badge.png" | prepend: site.subpath_url }}' alt='Google Play' class='isMax200PxWide'></a>
+  </p>
+
+  <p>
+    <a href='https://itunes.apple.com/jp/app/water-footprint/id1044041294' title='App Store'><img src='{{ "image/logos/ja/appstore_badge.png" | prepend: site.subpath_url }}' alt='App Store' class='isMax200PxWide'></a>
+  </p>
+</div>
+
 
 なぜそれを気にするのか？
 -----------
