@@ -1,3 +1,13 @@
+/*
+
+The JavaScript module loaded on the Water Footprint product list page.
+
+http://evgenii.com/water-footprint/en/
+
+License: Creative Commons Attribution Noncommercial License
+
+*/
+
 (function(){
   var searchInput,
     searchClearIcon,
@@ -5,12 +15,12 @@
     footerSpacer;
 
   var searchModule = (function() {
-    // Replace accent characters with normal ones
+    // Replaces characters that have accents with normal ones
     function removeDiacriticMarks(text) {
       return text.replace('ё', 'е');
     }
 
-    // Comverts text to lower case and removes diacritic marks
+    // Converts text to lower case and removes diacritic marks
     function prepareTextForCompare(text) {
       return removeDiacriticMarks(text).toLowerCase().trim();
     }
@@ -24,6 +34,7 @@
       }
     }
 
+    // Returns the synonyms for the item or null if none
     function itemSynonyms(item) {
       var dataAttribute = item.getAttribute('data-synonyms');
 
@@ -81,6 +92,7 @@
     footerSpacer = document.querySelector('.Footer-spacer');
   }
 
+  // The main function that is called on page load
   function init() {
     loadElements();
 
