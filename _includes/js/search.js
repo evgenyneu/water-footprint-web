@@ -74,21 +74,6 @@
     };
   })();
 
-
-  function didFocusSearchInput() {
-    scrollSearchInputToTop();
-  }
-
-  // Scrolls the screen to make the search input at the top  for easier input on small screens.
-  function scrollSearchInputToTop() {
-    var searchInputTop = searchInput.getBoundingClientRect().top;
-    var scrollTop  = window.pageYOffset || document.documentElement.scrollTop;
-
-    if (searchInputTop > 0 && Math.abs(searchInputTop) > 30) {
-      window.scrollTo(0, searchInputTop + scrollTop - 10);
-    }
-  }
-
   function loadElements() {
     searchInput = document.querySelector('.Search-input');
     searchIcon = document.querySelector('.Search-icon');
@@ -102,8 +87,6 @@
     searchInput.addEventListener('input', function() {
       searchModule.doSearch(searchInput.value);
     });
-
-    searchInput.onfocus = didFocusSearchInput;
 
     searchClearIcon.onclick = didClickClear;
     searchIcon.onclick = didClickSearchIcon;

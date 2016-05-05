@@ -1,17 +1,17 @@
 // Gray paletter
 $shade10:   #000000;
-$shade20:   #201d18;
-$shade30:   #403b30;
-$shade40:   #605848;
-$shade50:   #817661;
-$shade60:   #9d937d;
-$shade70:   #b5ad9d;
-$shade80:   #cec9be;
-$shade90:   #f5f3eb;
+$shade20:   #102020;
+$shade30:   #304040;
+$shade40:   #506060;
+$shade50:   #718181;
+$shade60:   #8d9d9d;
+$shade70:   #a5b5b5;
+$shade80:   #becece;
+$shade90:   #e5f3f3;
 $shade97:   #fdfdfd;
 $shade100:  #ffffff;
 
-$linkColor: #bbbbff;
+$linkColor: $shade60;
 
 // Responsive Breakpoints
 $fixedBreakpoint: 500px;
