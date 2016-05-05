@@ -1,7 +1,8 @@
 ---
 layout: default
-language: en
 layout_class: "layout-paddingHorizontal"
+language: en
+title: "帮助 | 水足迹"
 header_title: 水足迹
 header_help_link: 帮助
 ---

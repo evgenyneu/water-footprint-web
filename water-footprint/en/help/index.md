@@ -2,6 +2,7 @@
 layout: default
 layout_class: "layout-paddingHorizontal"
 language: en
+title: "Help | Water Footprint"
 header_title: Water Footprint
 header_help_link: Help
 ---

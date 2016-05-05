@@ -2,6 +2,7 @@
 layout: default
 layout_class: "layout-paddingHorizontal"
 language: ru
+title: "Помощь| Водный след"
 header_title: Водный след
 header_help_link: Помощь
 ---
