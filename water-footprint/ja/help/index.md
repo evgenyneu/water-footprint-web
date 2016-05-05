@@ -1,7 +1,7 @@
 ---
 layout: default
-language: ja
 layout_class: "layout-paddingHorizontal"
+language: ja
 header_title: 水の足跡
 header_help_link: ヘルプ
 ---
