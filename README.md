@@ -16,7 +16,7 @@ Run this Ruby script to rebuild the HTML files localted in `_includes/list` from
 
 ## Credit
 
-Data used in this app is released under the Creative Commons Attribution Non-commercial License and is derived from the following publications:
+Data used on Water Footprint web site is released under the Creative Commons Attribution Non-commercial License and is derived from the following publications:
 
 1. Mekonnen, M.M. and Hoekstra, A.Y. (2011) The green, blue and grey water footprint of crops and derived crop products, Hydrology and Earth System Sciences, 15, 1577-1600. Download PDF
 
