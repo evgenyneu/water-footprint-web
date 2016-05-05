@@ -1,11 +1,11 @@
-<a class="Logo-link isTextCentered" href="{{ page.language | prepend: site.subpath_url }}">
-  <img class='Logo-image' src="{{ "image/water_footprint_logo.png" | prepend: site.subpath_url }}" alt='{{ page.header_title | escape }}'>
-</a>
-
-<h1 class="Header-title isTextCentered">{{ page.header_title | escape }}</h1>
-
-<div class="Header">
-  <a class="Header-link" href="{{ page.language | prepend: site.subpath_url | append: '/select_language'}}">{{ page.header_english_link | escape }}</a>
-   &nbsp;&nbsp;&nbsp;
-  <a class="Header-link" href="/">{{ page.header_help_link | escape }}</a>
+<div>
+  <a class="Logo-link isTextCentered" href="{{ page.language | prepend: site.subpath_url }}">
+    <img class='Logo-image' src="{{ "image/water_footprint_logo.png" | prepend: site.subpath_url }}" alt='{{ page.header_title | escape }}'>
+  </a>
+  <h1 class="isTextCentered">{{ page.header_title | escape }}</h1>
+  <div class="Header">
+    <a class="Header-link" href="{{ page.language | prepend: site.subpath_url | append: '/select_language'}}">{{ page.header_english_link | escape }}</a>
+     &nbsp;&nbsp;&nbsp;
+    <a class="Header-link" href="{{ page.language | prepend: site.subpath_url | append: '/help'}}">{{ page.header_help_link | escape }}</a>
+  </div>
 </div>
