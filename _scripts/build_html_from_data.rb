@@ -17,7 +17,6 @@ def add_thousand_separator(value:, separator:)
   value.to_s.reverse.gsub(/...(?=.)/,'\&' + separator).reverse
 end
 
-
 def format_number(value:, language:)
   value = value.to_i
   thousands_separator = ' '.reverse
