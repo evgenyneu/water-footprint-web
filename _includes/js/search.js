@@ -4,61 +4,82 @@
     searchIcon,
     footerSpacer;
 
-
-  // Replace accent characters with normal ones
-  function removeDiacriticMarks(text) {
-    return text.replace('ё', 'е');
-  }
-
-  // Comverts text to lower case and removes diacritic marks
-  function prepareTextForCompare(text) {
-    return removeDiacriticMarks(text).toLowerCase().trim();
-  }
-
-
-  // Show/hide element
-  function showElement(element, show, className) {
-    element.className = className;
-
-    if (!show) {
-      element.className += ' isHidden';
-    }
-  }
-
-  function itemSynonyms(item) {
-    var dataAttribute = item.getAttribute('data-synonyms');
-
-    if (dataAttribute !== null) {
-      return prepareTextForCompare(dataAttribute);
+  var searchModule = (function() {
+    // Replace accent characters with normal ones
+    function removeDiacriticMarks(text) {
+      return text.replace('ё', 'е');
     }
 
-    return null;
-  }
+    // Comverts text to lower case and removes diacritic marks
+    function prepareTextForCompare(text) {
+      return removeDiacriticMarks(text).toLowerCase().trim();
+    }
 
+    // Show/hide element
+    function showElement(element, show, className) {
+      element.className = className;
 
+      if (!show) {
+        element.className += ' isHidden';
+      }
+    }
 
-  function doSearch(searchText) {
-    showHideClearIcon(searchText.length > 0);
-    searchText = prepareTextForCompare(searchText);
-    var items = document.querySelectorAll('.List-item');
+    function itemSynonyms(item) {
+      var dataAttribute = item.getAttribute('data-synonyms');
 
-    for(var i=0; i < items.length; i++) {
-      var item = items[i],
-        itemName = item.querySelector('.List-itemName'),
+      if (dataAttribute !== null) {
+        return prepareTextForCompare(dataAttribute);
+      }
+
+      return null;
+    }
+
+    // Returns true if the given word matches the item text or a synonym
+    function doesWordMatch(itemText, synonyms, word) {
+      return itemText.indexOf(word) > -1 || (synonyms !== null && synonyms.indexOf(word) > -1);
+    }
+
+    // Returns true if ALL words are present in the item.
+    function doesItemMatch(item, words) {
+      var itemName = item.querySelector('.List-itemName'),
         itemText = prepareTextForCompare(itemName.innerHTML),
         synonyms = itemSynonyms(item);
 
-      var showItem = itemText.indexOf(searchText) > -1 ||
-        (synonyms !== null && synonyms.indexOf(searchText) > -1);
+      for (var i = 0; i < words.length; ++i) {
+        var word = words[i];
+        if (word === '') { continue; }
+        if (!doesWordMatch(itemText, synonyms, word)) { return false; }
+      }
 
-      showElement(item, showItem, 'List-item');
+      return true;
     }
-  }
+
+    // Goes through all the product items and hides those that do not match the search text
+    function doSearch(searchText) {
+      showHideClearIcon(searchText.length > 0);
+      searchText = prepareTextForCompare(searchText);
+
+      var words = searchText.split(' '),
+        items = document.querySelectorAll('.List-item');
+
+      for(var i=0; i < items.length; i++) {
+        var item = items[i];
+        var showItem = doesItemMatch(item, words);
+        showElement(item, showItem, 'List-item');
+      }
+    }
+
+    return {
+      doSearch: doSearch
+    };
+  })();
+
 
   function didFocusSearchInput() {
     scrollSearchInputToTop();
   }
 
+  // Scrolls the screen to make the search input at the top  for easier input on small screens.
   function scrollSearchInputToTop() {
     var searchInputTop = searchInput.getBoundingClientRect().top;
     var scrollTop  = window.pageYOffset || document.documentElement.scrollTop;
@@ -79,7 +100,7 @@
     loadElements();
 
     searchInput.addEventListener('input', function() {
-      doSearch(searchInput.value);
+      searchModule.doSearch(searchInput.value);
     });
 
     searchInput.onfocus = didFocusSearchInput;
@@ -116,7 +137,7 @@
 
   function didClickClear() {
     searchInput.value = '';
-    doSearch('');
+    searchModule.doSearch(''); // Search for empty string to show all the items
   }
 
   init();
