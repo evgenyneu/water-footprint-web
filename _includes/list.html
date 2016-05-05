@@ -1,5 +1,5 @@
-<a class="Logo-link isTextCentered" href='/'>
-  <img class='Logo-image' src='image/water_footprint_logo.png' alt='{{ page.list_title | escape }}'>
+<a class="Logo-link isTextCentered" href="{{ site.baseurl }}">
+  <img class='Logo-image' src="{{ "/image/water_footprint_logo.png" | prepend: site.baseurl }}" alt='{{ page.list_title | escape }}'>
 </a>
 
 <h1 class="Header isTextCentered">{{ page.list_title | escape }}</h1>
@@ -11,7 +11,7 @@
 </div>
 
 <div class="Search">
-  <img class="Search-icon" src="image/search.png" alt="{{ page.list_search_input_placeholder | escape }}">
+  <img class="Search-icon" src="{{ "/image/search.png" | prepend: site.baseurl }}" alt="{{ page.list_search_input_placeholder | escape }}">
   <input class="Search-input" type="text" placeholder="{{ page.list_search_input_placeholder | escape }}">
   <img class="Search-clearIcon isVisibilityHidden" src="image/clear.png" alt="{{ page.list_clear_button_alt_text | escape }}">
 </div>
