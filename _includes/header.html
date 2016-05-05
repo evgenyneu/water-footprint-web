@@ -4,8 +4,14 @@
   </a>
   <h1 class="isTextCentered">{{ page.header_title | escape }}</h1>
   <div class="Header">
-    <a class="Header-link" href="{{ page.language | prepend: site.subpath_url | append: '/select_language'}}">{{ page.header_english_link | escape }}</a>
-     &nbsp;&nbsp;&nbsp;
+    <a class="Header-link" href="{{ "en" | prepend: site.subpath_url}}">English</a>
+    &nbsp;&nbsp;&nbsp;
+    <a class="Header-link" href="{{ "ru" | prepend: site.subpath_url}}">Русский</a>
+    &nbsp;&nbsp;&nbsp;
+    <a class="Header-link" href="{{ "jp" | prepend: site.subpath_url}}">日本語</a>
+    &nbsp;&nbsp;&nbsp;
+    <a class="Header-link" href="{{ "zh" | prepend: site.subpath_url}}">中文</a>
+    &nbsp;&nbsp;&nbsp;
     <a class="Header-link" href="{{ page.language | prepend: site.subpath_url | append: '/help'}}">{{ page.header_help_link | escape }}</a>
   </div>
 </div>
