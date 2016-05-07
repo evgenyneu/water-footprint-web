@@ -4,6 +4,8 @@ This is a source for the [web site](http://evgenii.com/water-footprint/en/) that
 
 Water Footprint is [also available](http://evgenii.com/projects/water-footprint-app-ios-android/) on Android and iOS.
 
+<img src="https://raw.githubusercontent.com/evgenyneu/water-footprint-web/master/_graphics/screenshots/water_footprint_web_screenshot_2.png" alt="Water Footprint for Web" width="360">
+
 ## Setting up the project locally
 
 
