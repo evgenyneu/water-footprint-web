@@ -13,7 +13,7 @@ Water Footprint is [also available](http://evgenii.com/projects/water-footprint-
 gem install jekyll
 ```
 
-Note: it requires Ruby and rubygems to be installed.
+Note: this requires Ruby and rubygems to be present on your system.
 
 #### 2) Clone the project
 
