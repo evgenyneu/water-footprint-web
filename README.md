@@ -56,3 +56,6 @@ Data used on Water Footprint web site is released under the Creative Commons Att
 
 The Water Footprint is distributed under [Creative Commons Attribution Non-commercial License](/LICENSE).
 
+## Feedback is welcome
+
+If you have any problems with this code please feel free to submit an issue ticket.
