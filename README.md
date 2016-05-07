@@ -4,8 +4,6 @@ This is a source for the [web site](http://evgenii.com/water-footprint/en/) that
 
 Water Footprint is [also available](http://evgenii.com/projects/water-footprint-app-ios-android/) on Android and iOS.
 
-<img src="https://raw.githubusercontent.com/evgenyneu/water-footprint-web/master/_graphics/screenshots/water_footprint_web_screenshot_3.png" alt="Water Footprint for Web" width="360">
-
 ## Setting up the project locally
 
 
@@ -57,6 +55,8 @@ Data used on Water Footprint web site is released under the Creative Commons Att
 ## License
 
 The Water Footprint is distributed under [Creative Commons Attribution Non-commercial License](/LICENSE).
+
+<img src="https://raw.githubusercontent.com/evgenyneu/water-footprint-web/master/_graphics/screenshots/water_footprint_web_screenshot_3.png" alt="Water Footprint for Web" width="300">
 
 
 ## Feedback is welcome
