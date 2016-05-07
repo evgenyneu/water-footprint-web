@@ -6,7 +6,32 @@ Water Footprint is [also available](http://evgenii.com/projects/water-footprint-
 
 ## Setting up the project locally
 
-This web site was built with [Jekyll](https://jekyllrb.com/). When developing the web site locally use the /water-footprint/en/ URL in the web browser.
+
+#### 1) Install Jekyll
+
+```
+gem install jekyll
+```
+
+Note: it requires Ruby and rubygems to be installed.
+
+#### 2) Clone the project
+
+```
+git clone git@github.com:evgenyneu/water-footprint-web.git
+cd water-footprint-web
+```
+
+#### 3) Run the web site locally
+
+```
+jekyll serve
+```
+
+#### 4) Open the web site in the browser
+
+Open the following URL: [http://127.0.0.1:4000/water-footprint/en/](http://127.0.0.1:4000/water-footprint/en/)
+
 
 ## Build HTML from data files
 
