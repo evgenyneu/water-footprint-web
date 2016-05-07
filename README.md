@@ -28,7 +28,7 @@ cd water-footprint-web
 jekyll serve
 ```
 
-#### 4) Open the web site in the browser
+#### 4) Open in the Web browser
 
 Open the following URL: [http://127.0.0.1:4000/water-footprint/en/](http://127.0.0.1:4000/water-footprint/en/)
 
