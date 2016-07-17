@@ -48,6 +48,16 @@ Data used in this app is released under the Creative Commons Attribution Non-com
 
 2) Mekonnen, M.M. and Hoekstra, A.Y. (2012) A global assessment of the water footprint of farm animal products, Ecosystems, 15, 401-415.
 
+## Water Footprint is free and open source
+
+The Water Footprint source code is distributed under Creative Commons Attribution Non-commercial License.
+
+[Android source code](https://github.com/evgenyneu/water-footprint-android)
+
+[iOS source code](https://github.com/evgenyneu/water-footprint-ios)
+
+[Web source code](https://github.com/evgenyneu/water-footprint-web)
+
 
 ## Feedback is welcome
 
